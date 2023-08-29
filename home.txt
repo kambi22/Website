@@ -1,0 +1,109 @@
+import { Card, Row, Col, Container } from "react-bootstrap";
+import wine from './images/wine.jpg'
+import chrries from './images/cherries.jpg'
+import chrries2 from './images/croissant.jpg'
+import chrries3 from './images/hamburger.jpg'
+import chrries4 from './images/popsicle.jpg'
+import chrries5 from './images/salmon.jpg'
+import chrries6 from './images/sandwich.jpg'
+import chrries7 from './images/tablesetting.jpg'
+
+
+
+
+function Home() {
+    return (
+        <div><h1>Home Page</h1>
+            <Container fluid className="mt-5">
+                <Row>
+                    <Col className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <Card style={{height:'330px', width:'100%' }} className='mb-4 ' variant='light' bg="blue">
+                            <Card.Img src={wine} className='imageas '  variant="top"/>
+
+                            <Card.Body >
+                                <Card.Title>Hungry Point</Card.Title>
+                                Hungry Point Amritsar
+                                Road Kot Ise khan..
+                                <Card.Link className="card-link"><a href="">Read more</a></Card.Link>
+                            </Card.Body>
+                           
+                        </Card>
+                    </Col>
+                    <Col className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <Card style={{backgroundColor:'lightblue',height:'330px'}}>
+                        <Card.Img src={chrries5} className='imageas' variant="top"/>
+                            <Card.Body>
+                                <Card.Title>Pizza Hut</Card.Title>
+                                Pizza Hut Zira
+                                Road Kot Ise khan
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <Card style={{backgroundColor:'lightblue',height:'330px'}}>
+                        <Card.Img src={chrries2} className='imageas' variant="top"/>
+                            <Card.Body>
+                                <Card.Title>Tharty Mills</Card.Title>
+                                Tharty Mills Amritsar
+                                Road Kot Ise khan
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col className="col-xl-3 col-lg-4 col-md-6 col-sm-12" >
+                        <Card style={{backgroundColor:'lightblue',height:'330px'}}>
+                        <Card.Img src={chrries3} className='imageas' variant="top"/>
+                            <Card.Body>
+                                <Card.Title>Burger Lover</Card.Title>
+                                Burger Lover Amritsar
+                                Road Kot Ise khan
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                
+                    <Col className="col-xl-3 col-lg-4 col-md-6 col-sm-12" >
+                        <Card style={{backgroundColor:'lightblue',height:'330px'}}>
+                        <Card.Img src={chrries4} className='imageas' variant="top"/>
+                            <Card.Body>
+                                <Card.Title>Mapels</Card.Title>
+                                Mapals Zira
+                                Road Kot Ise khan
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card style={{backgroundColor:'lightblue',height:'330px'}}>
+                        <Card.Img src={chrries} className='imageas' variant="top"/>
+                            <Card.Body>
+                                <Card.Title>Macdonlds</Card.Title>
+                                Macdonalds Ludiana
+                                Road Moga
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card style={{backgroundColor:'lightblue',height:'330px'}}>
+                        <Card.Img src={chrries6} className='imageas' variant="top"/>
+                            <Card.Body>
+                                <Card.Title>Zmato</Card.Title>
+                                Zmato Amritsar
+                                Road Kot Ise khan
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col >
+                        <Card style={{backgroundColor:'lightblue',height:'330px'}}>
+                        <Card.Img src={chrries7} className='imageas' variant="top"/>
+                            <Card.Body>
+                                <Card.Title>Svigy</Card.Title>
+                                Svigy Dhusanjh
+                                Road Kot Ise khan
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
+
+        </div>
+    )
+}
+export default Home;

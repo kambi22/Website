@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "trusty-sentinel-397012",
+  "private_key_id": "b077348e870a68b8bf8c2a8ad2930a609aca5c93",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDLAglsk554uzFJ\nuM3qT0CDbtBeKvl7Cj33mUNS2OxNQxdCX0lQJ3HAU9o9koZ8iCJoNyUTmlLbczMi\n/FdIZ89zsGK3kCGdXOOceoFIYZNRCD69YCAYCtsWxf+92eFUoWKf66Iazr7veIPd\nsnBMFagG/ocd3mJ6Bxy1W1rXx6TOm/J1RJ4F1gL93ukbjU0JMj+U5oBlyL4FpLao\nWn06N3vKUkbo8/RFGz5YvXPHVYp022pXSxNWZsqOsumbvZcamTjxpqVA6Bfw6HI5\n44vNHSH640fPm6SiXfCxtZjnuNBYQFvcV6gdlD0cZEiMuydVHj6BLDCBJHfW5E38\nclWwkbpFAgMBAAECggEADdsIu6FjqofUOFzlqP1ZwN66WAME3hH34sNSJgBqOGfA\n2aXZQiA/Ekpm1db/WNaNyqEg5bKdvx6gud2RM37qWNIMGs06jhv96PsvgbovLNOs\nPI6oAhwTkf1XlCSfzX/qVFHn0X6U55FJJsN8CKVdv4R1wmMgQ4XivroKfDnDFNrO\n0VTo7RLBD4BEPQKAht3hCqBmhz0Xw9j056FlC+Ma4ioA1dAAfbmr7U6Bc21iGxqK\n+f9Bolr+csZKUFJaMlGHOzO0a3Dvfwdm5PM+eN54MfuQ3FGbuhDy2MBPt8vep7db\nh8Up0eU0CuYHr/9onoKsFDnDfhgnuJxQ2gCBHOaoYQKBgQDsAnhtZ1NbYi11FmdA\nWg7+uk9nnU7WM5whvSmw1BFq2xH2bSs3uosgyFatPjw5xHGNxR7ZA6GZXT42CEki\nuhi/BHQLDlWPjeiYyKO0oextDHP3vZcyDNUSFXFUrQY/Ib27TxRC0umebK+iBw0J\n50cH4PZk8fobFeN+I/BVZBvLPQKBgQDcM/jfou+Au5wtfn71MqJfGc59Ice9whTm\nnOE08j6hxio5B2ILXaBVBf0yItWUMgHsVhDHBcHE+u2vejwNF26WnYiziwh9+PQt\nqwvKzNFL/6znV4cbNYR3uVTk7m40v89N5q14dgwXCj40DlhnJhyo3geum5rkPHN6\nm9I79/+7qQKBgQC5n0PKgF7eW/x2v9Ublvl+PVjgnKf57wOYwae9rT25tm2NTNWV\n8kEk2ozZmz5RDQFmyKf3dVSvQ9f/NUsYZhe6fS0r2O1QiANtzzh6hHRoXEgFjPcS\n5Wbb30OQnrlwBACvBoZf/HTEJqWIoVUO+fky6CvCv1K/5NpVRrzq3F7D3QKBgQC1\niU86p2wF2CVoSCnIYWcFOhRGiuvNn8x1Vo4/hRpnaiRzAYgt0JEWpypXA+rKEvQM\n7+NDAJb/mtMK4J3TOScdmmARjKSCnhRH9gRxu6ssmWrlCf7DSrqbrTm0xnAqopr4\nIR2P+tn6wKIJbm4pE317Jhh1NalbUg7t3LpUYB7/iQKBgENqskRfegyHnbV8GLc+\nim5x2LWWWHy+CzMrAUkBtf25UNLWqNH5nYDBCzA/5M/zjg5sOoR+/0Zsv7kJQAG/\neT3T7Dcyr281j6k7ydtHOoMGcoZ0JDN2exXIce8RJtXQlIHslAga1O6Y23GGohqT\nRql8/1rznWmuAFF62u77RctP\n-----END PRIVATE KEY-----\n",
+  "client_email": "react-project@trusty-sentinel-397012.iam.gserviceaccount.com",
+  "client_id": "109304337801567286226",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/react-project%40trusty-sentinel-397012.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

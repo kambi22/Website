@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" href="form.css">
+
+    </head>
+    <body>
+        <div class="container">
+            
+            <div class="titale">
+               
+                <label for="tital">Job Application Form</label>
+            </div>
+            <div class="form_container">
+            <div class="detail">
+                <label for="first" >First name</label>
+                <input type="text"  placeholder="0" id="screen"> 
+            </div>
+            <div class="detail">
+                <label for="last">Last name</label>
+                <input type="text" id="last-name" placeholder="Enter Last name">
+            </div>
+            
+            <div class="detail">
+                <label for="Email">Email</label>
+                <input type="email" id="email" placeholder="Enter Email">
+            </div>
+            <div class="detail">
+                <label for="Job role">Jobe role</label>
+                <input type="se"  placeholder="Select JOb role">
+            </div>
+            <div class="detail">
+                <label for="address">Address</label>
+                <textarea name="address" id="address" cols="50" rows="4" placeholder="Enter Adderss"></textarea>
+            </div>
+            <div class="detail">
+                <label for="city">City</label>
+                <input type="text" placeholder="Enter your city">
+            </div>
+            <div class="detail">
+                <label for="pincode">pincode</label>
+                <input type="text" id="pin-code" placeholder="Enter your pincode">
+            </div>
+
+            <div class="detail">
+                <label for="date">Date</label>
+                <input value="2022-11-11" type="date" name="date" id="date" >
+            </div>
+            <div class="detail">
+                <label for="upload">Upload</label>
+                <input type="file" name="upload" class="upload" id="upload">
+            </div>
+            
+            <div class="button">
+                <button onclick="login()">Submite</button>
+            </div>
+
+            
+        </div>
+    
+    </div>
+    <script>
+        let outputscr=document.getElementById("screen");
+        var first2 = document.getElementById('last-name');
+        var email = document.getElementById('email');
+        let pin_code = document.getElementById('pin-code"');
+
+        function login(){
+           document.write(outputscr)
+        }
+        
+        
+        
+    </script>
+    </body>
+</html>

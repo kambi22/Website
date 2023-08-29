@@ -1,0 +1,101 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { LinkContainer } from 'react-router-bootstrap';
+import { faUser, faHome, faMagnifyingGlass, faRightFromBracket ,faX} from '@fortawesome/free-solid-svg-icons';
+import "./Navlink.css"
+import { useState } from 'react';
+import { createSearchParams, Link, useNavigate, useSearchParams } from 'react-router-dom';
+
+import { useMediaQuery } from 'react-responsive';
+import Sidebar from './Sidebar';
+function NavLinks() {
+  const [search, setsearch] = useSearchParams();
+  const [showsearch, setshowsearch] = useState(false);
+  const navigate = useNavigate();
+
+  const Smallscreen = useMediaQuery({ maxWidth: 1200 });
+
+
+  const SearchValue = (value) => {
+   
+      navigate({
+        pathname:'/search',
+        search:`?${createSearchParams(value)}`
+      })
+   
+  
+    
+  }
+  const heandlesearch = () => {
+    setshowsearch(!showsearch);
+  };
+
+  return (
+
+    <div>
+
+      <Navbar variant='dark' expand="xl"  bg='blue' className='navbar' fixed='top'   >
+        <Container fluid>
+          {!Smallscreen && (
+            <Navbar.Brand href="#">Resturent</Navbar.Brand>
+          )}
+
+          {!Smallscreen && (
+            <Nav className='me-auto'>
+
+              <LinkContainer to="/">
+                <Nav.Link ><FontAwesomeIcon icon={faHome} /> Home</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/list">
+                <Nav.Link >List</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/create">
+                <Nav.Link >Create</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/logout">
+                <Nav.Link><FontAwesomeIcon icon={faRightFromBracket} fontSize="20px" /></Nav.Link></LinkContainer>
+
+            </Nav>
+          )}
+          <Navbar.Toggle aria-controls='sidebar' />
+          <Navbar.Collapse id='sidebar'>
+            {Smallscreen && (
+              
+              <Sidebar />
+            )}
+
+          </Navbar.Collapse>
+
+            <Nav >
+              <Form inline id='search' className=' d-xl-inline-block d-none ' >
+                
+                <Form.Control type="search" id='search'  onChange={(e) => SearchValue(e.target.value)}   placeholder='  Search'></Form.Control>
+              </Form>
+            
+
+            </Nav>
+         
+            <>
+              <label id='searchicon' className={showsearch ? ' d-none':' d-inline-block d-xl-none ms-auto'} onClick={heandlesearch} htmlFor=""><FontAwesomeIcon className='fixed-top ms-auto py-3 px-5' icon={faMagnifyingGlass}></FontAwesomeIcon></label>
+
+              <Form inline className={showsearch ? "d-inline-block ": "d-none ms-auto"}  >
+                <Form.Control type="search" id='smallsearch'  onChange={(e) => SearchValue(e.target.value)} placeholder='  Search' />
+              </Form>
+            </>
+    
+          <Nav className='adjust pe-4 ' >
+            <LinkContainer to="/profile">
+              <Nav.Link><FontAwesomeIcon className='fixed-top ms-auto p-3' icon={faUser} fontSize="20px" /></Nav.Link></LinkContainer>
+          </Nav>
+
+        </Container>
+      </Navbar>
+
+    </div>
+  );
+}
+
+export default NavLinks;

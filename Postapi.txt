@@ -1,0 +1,41 @@
+import axios from 'axios';
+import { useState } from 'react';
+import Header from 'tar/lib/header';
+import './App.css';
+
+
+
+function App(){
+  const [idstudent,setid]=useState("")
+  const [name,setname]=useState("")
+  const [rolno,setroll]=useState("")
+  const [address,setiadress]=useState("")
+  function Getapi(){
+    axios.get("http://localhost:5000/student")
+    .then((resp)=>console.log(resp.data))
+      
+  }
+function Postapi(){
+  let result={idstudent,rolno,name,address}
+  console.log(result)
+
+  axios.post("http://localhost:5000/student",result)
+  .then((resp)=> console.log(resp.data)).catch((error)=> console.log(error))
+ 
+}
+  return(
+      
+      <>
+      <h1>GET DATA API</h1>
+      <input type="text" name='idstudent_std' value={idstudent} placeholder='id' onChange={(e)=>{setid(e.target.value)}} /> <br /><br />
+      <input type="text" name='name' value={name} placeholder='name'  onChange={(e)=>{setname(e.target.value)}} /> <br /><br />
+      <input type="text" name="rollno" value={rolno} placeholder='roll' onChange={(e)=>{setroll(e.target.value)}} /><br /><br />
+      <input type="text" name='address' value={address} placeholder='address' onChange={(e)=>{setiadress(e.target.value)}} /><br /><br />
+      <br />
+      <button onClick={()=>Getapi()}>Get api</button><br /><br />
+      <button onClick={()=>Postapi()}>Post api</button><br /><br />
+
+      </>
+  )
+}
+export default App;

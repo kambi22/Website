@@ -1,0 +1,28 @@
+import React from "react";
+import { BrowserRouter , Routes,Route} from "react-router-dom";
+import Create from "./Create";
+import List from "./List";
+import NavLinks from "./NavLinks";
+import Profile from "./Profile";
+import Update from "./Update";
+import Login from "./Login";
+import Logout from "../Resturent/Logout";
+
+function Resturent(){
+    return(
+       <div>
+        <BrowserRouter>
+        <NavLinks/>
+        <Routes>
+            <Route path="/" element={<h1>Home Page</h1>}></Route>
+            <Route path="/list" element={<List/>}></Route>
+            <Route path="/create" element={<Create/>}></Route>
+            <Route path="/update" element={<Update/>}></Route>
+            <Route path="/profile" element={<Profile/>}></Route>
+            <Route path="/login" element={<Login/>}></Route>
+            <Route path="/logout" element={<Logout />}></Route>
+            </Routes></BrowserRouter>
+       </div>
+    )
+}
+export default Resturent;

@@ -1,0 +1,174 @@
+import { faCamera, faUserTie } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Card, Form, Container, Button } from "react-bootstrap";
+import { useMemo } from "react";
+import { Buffer } from "buffer";
+function Mobile() {
+    const [brand,setBrand] = useState("")
+    const [location,setlocation] = useState("")
+    const [title,settitle] = useState("")
+    const [discription,setdiscription] = useState("")
+    const [price,setprice] = useState("")
+    const [username,setusername] = useState("Satnam singh")
+    const [phoneno,setphoneno] = useState("")
+    const [file,setfile] = useState()
+    const [getimage,setimage] = useState([])
+    const [ram,setRAM] = useState()
+    const [storage,setStorage] = useState()
+    const [buffer,SetBuffer] = useState([])
+    const [qualties,Setqualties] = useState()
+    
+    const ChooseImage = (e) =>{
+        setfile(e.target.files[0])
+        console.log(e.target.files[0])
+       
+    }
+   
+    const UploadPost = (e) =>{
+        const formatData = new FormData();
+        formatData.append('image',file)
+        const product ='Mobile'
+        const proimage = formatData
+        const PostData = {product,brand,location,price,username,phoneno,title,discription,proimage}
+        console.log(PostData);
+        axios.post("http://localhost:3000/upload",formatData)
+        .then((resp)=>{console.log(resp.data)})
+        .catch((error)=>console.log("error",error))
+    }
+   
+        const GetData = () =>{
+            axios.get('http://localhost:3000/getimage')
+            .then((resp) => {console.log("resp data",resp.data);
+                const buffers = Buffer.from(resp.data)
+                const base64Data = buffers.toString('base64');
+                const DataUrl = `data:image/jpeg;base64${base64Data}`;
+                setimage(DataUrl)})
+                
+            .catch((error)=>console.error('error',error))
+
+
+            console.warn('image',getimage);
+            
+         } 
+      
+         
+               
+           
+      
+          
+   
+     
+    return (
+        <div className="mt-5">
+        
+            <Container  >
+                <Card className="w-100 ">
+                    <Card.Header><h3>Selected Category</h3><br />
+                        <h6>Mobile</h6>
+                        <h6>Seleced Category: {brand}</h6>
+                    </Card.Header>
+                    <Card.Body>
+                        <Card.Text>
+                      
+                            <Form.Select value={brand} onChange={(e)=>setBrand(e.target.value)} className="">
+                                <option selected>Select Brand name</option>
+                                <option value="Oppo">Oppo</option>
+                                <option value='iPhone'>iPhone</option>
+                                <option value="Samsung">Samsung</option>
+                                <option value="MI">MI</option>
+                                <option value="Reno">Reno</option>                               
+                                 <option value="Vivo">Vivo</option>
+                            </Form.Select>
+                            <br />
+                            <Form.Select value={ram} onChange={(e)=>setRAM(e.target.value)} className="">
+                                <option selected>Select RAM</option>
+                                <option value="1Gb">1Gb</option>
+                                <option value='2Gb'>2Gb</option>
+                                <option value="4Gb">4Gb</option>
+                                <option value="6Gb">6Gb</option>
+                                <option value="8Gb">8Gb</option>                               
+                                
+                            </Form.Select>
+                            <br />
+                            <Form.Select value={storage} onChange={(e)=>setStorage(e.target.value)} className="">
+                                <option selected>Select Storage</option>
+                                <option value="8GB">8GB</option>
+                                <option value='16GB'>16GB</option>
+                                <option value="32GB">32GB</option>
+                                <option value="64GB">64GB</option>
+                                <option value="128GB">128GB</option>                               
+                                 <option value="256GB">256GB</option>
+                            </Form.Select>
+                            <br />
+                            <label>Add Titile</label>
+                            <input className="form-control" type="text" value={title}  onChange={(e)=>settitle(e.target.value)} />
+                            <br />
+                            <label>Add Description</label>
+                            <textarea className="form-control" value={discription}  onChange={(e)=>setdiscription(e.target.value)} name="description" id="description" cols="30" rows="5"></textarea>
+                            <br />
+                            <hr />
+                            <label>Add Price</label>
+                            <input className="form-control" value={price}  onChange={(e)=>setprice(e.target.value)}  type="text" />
+                            <br />
+                            <label for='formFileMultiple' class='from-label'>Upload Photos</label><br />
+                            <input type="file" onChange={ChooseImage} class='form-control' id="formFileMultiple" />
+                            <br />
+                            <hr />
+                            <Form.Select value={location} onChange={(e)=>setlocation(e.target.value)} className="">
+                                <option selected>Select Your Location</option>
+                                <option value="Moga">Moga</option>
+                                <option value="Ludiana">Ludiana</option>
+                                <option value="KotiseKhan">KotiseKhan</option>
+                                <option value="Zira">Zira</option>
+                                <option value="Amritsar">Amritsar</option>
+                                <option value="Mohali">Mohali</option>
+                                <option value="Fridkot">Fridkot</option>
+                                <option value="Patiala">Patiala</option>      
+                            </Form.Select>
+                            <br />
+                                <hr />
+                                <h4>Review Your usernames</h4>
+                                <FontAwesomeIcon fontSize='40px' className="d-inline" icon={faUserTie}/>
+                                <input type="text" className="form-control d-inline w-75 ms-5" value={username}  onChange={(e)=>setusername(e.target.value)}  />
+                                
+                                <h6 className="mt-5">Let s Verify your account</h6>
+                                <p>we willl send you a confirmation code by sms on the nest step</p>
+                              
+                                <label htmlFor="">Mobile Phone Nomber*</label>
+                                <input type="text" className="form-control" value={phoneno}  onChange={(e)=>setphoneno(e.target.value)}  placeholder="+91 |" />
+                               
+                                <br />
+                                <hr />
+                                
+                                <Button  onClick={UploadPost} className="bg-success w-100 border-0">Post</Button>
+                                <Button  onClick={GetData} className="bg-info w-100 border-0">GetData</Button>
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+            </Container>
+           <img src={getimage} alt="" />
+        </div>
+    )
+}
+export default Mobile;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

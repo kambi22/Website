@@ -1,0 +1,205 @@
+<html>
+    <head>
+        <title>Mesho</title>
+         <link rel="stylesheet" href="mesho.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </head>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+
+}
+
+.main{
+    width: 100%;
+}
+
+
+.source{
+   
+    width: 1000px;
+    margin: 50px auto;
+}
+
+
+.banner img{   
+    border-radius: 20px;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 50px;   
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat( 6,6fr);
+    
+    width:100%;
+}
+.content img{
+    
+    height: 100px;
+    width:150px;
+    padding: 6px;
+    overflow-y: scroll;
+    
+}
+
+
+@media screen and (max-width: 780px) {
+    .content{
+      display: grid;
+      grid-template-columns: repeat(5,5fr);
+                 
+  }
+  .source{
+   
+    width: 100%;
+    margin: 50px auto;
+}
+.banner img{   
+    border-radius: 16px;
+    height: 300;
+    width: 100%;
+    margin-bottom: 40px;   
+}
+
+  
+}
+  
+  @media screen and (max-width: 635px) {
+    .content{
+      display: grid;
+      grid-template-columns: repeat(4,4fr);
+     
+         
+  }
+   .source{
+   
+    width: 100%;
+    margin: 50px auto;
+}
+.banner img{   
+    border-radius: 12px;
+    height: auto;
+    width: 100%;
+    margin-bottom: 30px;   
+}
+
+
+  }
+  
+  @media screen and (max-width: 480px) {
+    .content{
+      display: grid;
+      grid-template-columns: repeat(3,3fr);
+     
+      
+         
+  }
+   .source{
+   
+    width: 100%;
+    margin: 50px auto;
+}
+.banner img{   
+    border-radius: 8px;
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;   
+}
+
+ 
+  }
+  
+  @media screen and (max-width: 324px) {
+    .content{
+      display: grid;
+      grid-template-columns: repeat(2,2fr);
+      
+         
+  }
+   .source{
+   
+    width: 100%;
+    margin: 50px auto;
+}
+
+.banner img{   
+    border-radius: 4px;
+    height: auto;
+    width: 100%;
+    margin-bottom: 10px;   
+    margin-top: 5px; 
+}
+
+  }
+
+</style>
+    <body>
+      
+<div class="source">
+ <div class="banner-container">
+        <div class="banner">
+            <img src="file:///C:/Users/pc/Desktop/website/ice.png" alt="ice">
+        </div>
+    </div>
+    
+
+
+        <div class="content">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\enveronment.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\enveronment.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\enveronment.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\enveronment.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\enveronment.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\enveronment.png" alt="">   
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\ppp.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\ppp.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\ppp.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\ppp.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\ppp.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\ppp.png" alt="">   
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\ice.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\ice.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\ice.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\ice.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\ice.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\ice.png" alt="">   
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">
+            <img src="C:\Users\pc\Desktop\website\computer.png" alt="">  
+        </div>
+
+        
+        
+    </div>
+        
+</div>
+
+        
+    </body>
+</html>

@@ -1,0 +1,83 @@
+import { faArrowDownShortWide, faArrowDownWideShort, faBars, faBell, faFilter, faFilterCircleDollar, faFilterCircleXmark, faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
+import Sidebar from "./Sidebar";
+import { useState } from "react";
+import Form from 'react-bootstrap/Form';
+function Headers() {
+    const [show, setshow] = useState(false)
+
+    const showhandler = () => {
+        setshow(true)
+    }
+    const closehandler = () => {
+        setshow(false)
+    }
+    return (
+        <div>
+            <Navbar variant='light' bg='info' className="navbar">
+                <Container fluid>
+                    <Button aria-controls="offcanvas" className="me-1 border-0 bg-info" onClick={showhandler}><FontAwesomeIcon fontSize='25px' icon={faBars} /></Button>
+                    <Navbar.Brand>Olx</Navbar.Brand>
+                    <Navbar.Offcanvas id='offcanvas' show={show} onHide={closehandler}>
+                        <Offcanvas.Header className="bg-info" closeButton>
+                            <Offcanvas.Title>Olx.in</Offcanvas.Title>
+                        </Offcanvas.Header>
+                        <Offcanvas.Body>
+                            {show && (
+                                <Nav className="hv-100">
+                                    <Sidebar />
+                                </Nav>
+                            )}
+                        </Offcanvas.Body>
+                    </Navbar.Offcanvas>
+
+                    <div className="Searchbars ">
+                        <Nav className=" w-50 me-5 searchnav">
+                            <FontAwesomeIcon icon={faMagnifyingGlass} className="serchicons text-muted p-2" />
+                                <input className=" pe-2 search bg-white" list="opetionlist" name="search" typeof="search" type="search" placeholder="Search Category"/>                       
+                                <datalist id="opetionlist">
+                                    <option value="Mobiles"></option>
+                                    <option value="Cars"></option>
+                                    <option value="Bikes"></option>
+                                    <option value="Properties"></option>
+                                    <option value="Electronics"></option>
+                                    <option value="Fashion"></option>
+                                </datalist>
+                        </Nav>
+                        <Nav className=" w-50 me-3 searchnav">
+                            <FontAwesomeIcon icon={faMagnifyingGlass} className="serchicons text-muted p-2" />
+                                <input className="pe-2 search bg-white" list="opetionlist2" name="search" typeof="search" type="search" placeholder="Search Location"/>                       
+                                <datalist id="opetionlist2">
+                                    <option value="Moga"></option>
+                                    <option value="Ludhiana"></option>
+                                    <option value="zira"></option>
+                                    <option value="Amritsar"></option>
+                                    <option value="Fridkot"></option>
+                                    <option value="Bathinda"></option>
+                                </datalist>
+                        </Nav>
+                        <Nav>
+                            <Button variant='success' >Search</Button>
+                        </Nav>
+                        
+                    </div>
+
+                      <Nav>
+                        <LinkContainer to='/notification'>
+                            <Nav.Link><FontAwesomeIcon icon={faBell}></FontAwesomeIcon></Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to='/login'>
+                            <Nav.Link><FontAwesomeIcon icon={faUser}></FontAwesomeIcon></Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to='/filter'>
+                            <Nav.Link><FontAwesomeIcon icon={faArrowDownWideShort}></FontAwesomeIcon></Nav.Link>
+                        </LinkContainer>
+                      </Nav>
+                </Container>
+            </Navbar>
+        </div>
+    )
+}
+export default Headers;

@@ -1,0 +1,1 @@
+Crt + p for goto file search file name and go there

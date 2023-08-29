@@ -1,0 +1,7 @@
+app.post("/login",async (req, resp) => {
+    let {email,passward}= req.body;
+    console.log(email,passward);
+    const valid = await validate(email)
+    if(!valid.result) return resp.send("not valid email")
+    return resp.send("valid")
+});

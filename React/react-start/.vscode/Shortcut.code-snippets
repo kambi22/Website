@@ -1,0 +1,103 @@
+{
+	// Place your react-start workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"React Functional Component": {
+		"prefix": "rfc",
+		"body": [
+		  "import React from \"react\"",
+		  "",
+		  "const ${1:name} = (props) => {",
+		  "  return (",
+		  "    <div>",
+		  "      $2",
+		  "    </div>",
+		  "  )",
+		  "};",
+		  "",
+		  "export default ${1:name};",
+		  ""
+		],
+	  },
+	  "React Call Back Function": {
+		"prefix": "cbf",
+		"body": [
+		  
+		  "const ${1:name} = () => {",
+		  "    $2",
+		  "};",
+		],
+	  },
+	  "React useEffect": {
+		"prefix": "uef",
+		"body": [
+		  
+			"$1(()=>{",
+            "    $2",
+			"},[]);"
+		 
+		],
+	  },
+	  "React useState": {
+		"prefix": "stat",
+		"body": [
+		  
+		  "const [$1,set$1] = $2();",
+		 
+		],
+	  },
+	  "React get api": {
+		"prefix": "get",
+		"body": [
+		  
+		"$1.get(`http://localhost:5000/$2`)",
+        "  .then((resp) => {console.log('resp data', resp.data)})",
+        "  .catch((error) => console.error('error', error))"
+		 
+		],
+	  },
+	  "React post api": {
+		"prefix": "post",
+		"body": [
+		  
+		"$1.post(`http://localhost:5000/$2`,$3)",
+        "  .then((resp) => {console.log('resp data', resp.data)})",
+        "  .catch((error) => console.error('error', error))"
+		 
+		],
+	  },
+	  "React delete api": {
+		"prefix": "adel",
+		"body": [
+		  
+		"$1.delete(`http://localhost:5000/$2`)",
+        "     .then((resp) => {console.log('resp data', resp.data)})",
+        "     .catch((error) => console.error('error', error))"
+		 
+		],
+	  },
+	  "React put api": {
+		"prefix": "put",
+		"body": [
+		  
+		"$1.put(`http://localhost:5000/$2`,$3)",
+        "  .then((resp) => {console.log('resp data', resp.data)})",
+        "  .catch((error) => console.error('error', error))"
+		 
+		],
+	  },
+	  "React map Function": {
+		"prefix": "map",
+		"body": [
+		  
+		"$1.map((item,i)=>",
+		"      $2",
+		")"
+		 
+		],
+	  },
+}

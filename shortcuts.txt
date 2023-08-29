@@ -1,0 +1,20 @@
+{
+  "key": "ctrl+enter",
+  "command": "editor.action.insertLineAfter",
+  "when": "editorTextFocus && !editorReadonly"
+}
+{
+  "key": "ctrl+shift+enter",
+  "command": "editor.action.insertLineBefore",
+  "when": "editorTextFocus && !editorReadonly"
+}
+{
+  "key": "ctrl+up",
+  "command": "editor.action.copyLinesDownAction",
+  "when": "editorTextFocus && !editorReadonly"
+}
+{
+  "key": "ctrl+down",
+  "command": "editor.action.copyLinesUpAction",
+  "when": "editorTextFocus && !editorReadonly"
+}

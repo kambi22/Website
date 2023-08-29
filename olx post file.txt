@@ -1,0 +1,125 @@
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ListItem, ListItemAvatar, ListItemButton, ListItemIcon } from "@mui/material";
+import { Card, Table, Accordion, Container, ListGroup, ListGroupItem, Row } from "react-bootstrap";
+
+function Sell() {
+    return (
+        <div><h2>Choose Category</h2>
+            <Container>
+                <Card className="w-100 mt-5 shadow" variant='light' bg="white">
+                    <ListGroup className="list-items">
+                        
+                        <Accordion defaultActiveKey='0'  className="w-100">
+                       <Accordion.Item eventKey="0">
+                                <Accordion.Header>Mobiles</Accordion.Header>
+                                <Accordion.Body>
+                                <ListGroup className="p-0 m-0">
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>I Phone</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Oppo</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Samsung</ListItemButton></ListGroupItem>
+                                    </ListGroup>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="1">
+                                <Accordion.Header>Cars</Accordion.Header>
+                                <Accordion.Body>
+                                    <ListGroup className="p-0 m-0">
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Forturer</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Creta</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Scorpio</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>varna</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Frari</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Rols Royls</ListItemButton></ListGroupItem>
+                                    </ListGroup>
+                                </Accordion.Body>
+                            </Accordion.Item>
+
+                            <Accordion.Item eventKey="2">
+                                <Accordion.Header>Bikes</Accordion.Header>
+                                <Accordion.Body>
+                                <ListGroup className="p-0 m-0">
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Forturer</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Creta</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Scorpio</ListItemButton></ListGroupItem>
+                                    </ListGroup>
+                                </Accordion.Body>
+                            </Accordion.Item>
+
+                            <Accordion.Item eventKey="3">
+                                <Accordion.Header>Properties</Accordion.Header>
+                                <Accordion.Body>
+                                <ListGroup className="p-0 m-0">
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Ludhiana</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Creta</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Scorpio</ListItemButton></ListGroupItem>
+                                    </ListGroup>
+                                </Accordion.Body>
+                            </Accordion.Item>
+
+                            <Accordion.Item eventKey="4">
+                                <Accordion.Header>Jobs</Accordion.Header>
+                                <Accordion.Body>
+                                <ListGroup className="p-0 m-0">
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Software Enginear</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Web devloper</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Blockchain devloper</ListItemButton></ListGroupItem>
+                                    </ListGroup>
+                                </Accordion.Body>
+                            </Accordion.Item>
+
+                            <Accordion.Item eventKey="5">
+                                <Accordion.Header>Electronics</Accordion.Header>
+                                <Accordion.Body>
+                                <ListGroup className="p-0 m-0">
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Tv</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Washing Machine</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Fan</ListItemButton></ListGroupItem>
+                                    </ListGroup>
+                                </Accordion.Body>
+                            </Accordion.Item>
+
+                            <Accordion.Item eventKey="6">
+                                <Accordion.Header>Furniture</Accordion.Header>
+                                <Accordion.Body>
+                                <ListGroup className="p-0 m-0">
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Bed</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Sofa</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Tabels</ListItemButton></ListGroupItem>
+                                    </ListGroup>
+                                </Accordion.Body>
+                            </Accordion.Item>
+
+                            <Accordion.Item eventKey="7">
+                                <Accordion.Header>Commercial Vehacles & Spares</Accordion.Header>
+                                <Accordion.Body>
+                                <ListGroup className="p-0 m-0">
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Car Spares</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Bikes Spares</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Truks Spares</ListItemButton></ListGroupItem>
+                                    </ListGroup>
+                                </Accordion.Body>
+                            </Accordion.Item>
+
+                            <Accordion.Item eventKey="8">
+                                <Accordion.Header>Fashion</Accordion.Header>
+                                <Accordion.Body>
+                                <ListGroup className="p-0 m-0">
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Clothes</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Shoes</ListItemButton></ListGroupItem>
+                                        <ListGroupItem className="p-0 m-0"><ListItemButton>Watchs</ListItemButton></ListGroupItem>
+                                    </ListGroup>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Accordion>
+
+                    </ListGroup>
+
+                </Card>
+            </Container>
+        </div>
+    )
+}
+export default Sell;
+
+
